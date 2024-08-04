@@ -1,0 +1,315 @@
+:root {
+--clr-dark: hsl(240, 100%, 5%);
+--clr-orange: hsl(35, 77%, 62%);
+--clr-soft-red :hsl(5, 85%, 63%);
+}
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+@import url('https://fonts.google.com/specimen/Inter');
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+ .attribution a { color: hsl(228, 45%, 44%); }
+
+
+    
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+   
+    margin-top: 30px;
+    
+}
+
+.menu-icon  {
+    display: none;
+}
+.hamburger{
+    display: none;
+}
+.menu-close {
+    display: none;
+}
+
+.link ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    font-size: larger;
+    margin-right: 95px;
+    text-decoration: none;
+    
+}
+.link li {
+    list-style: none;
+}
+.link a{
+    text-decoration: none;
+    color: hsl(236, 13%, 42%);
+}
+.link a:hover{
+    color: var(--clr-soft-red);
+}
+.logo {
+    margin-left: 60px;
+}
+
+.mainpart {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows:  auto auto auto auto auto auto auto auto auto auto auto;
+    gap: 20px;
+    padding-left: 60px;
+    justify-content: center;
+    margin: 0.5rem; 
+    
+}
+.headingpic{
+    
+    grid-column: 1/ span 6;
+    grid-row: 1/ span 2;
+    height: 80vh;
+    width: 134vh;
+    margin: 20px;
+
+    
+    
+}
+
+.web30{
+    grid-column:1 / span 3 ;
+    grid-row: 4 / span 3 ;
+    max-height: 100%;
+    max-width: 100%;
+    font-size:xx-large;
+    font-weight: 800;
+    
+}
+.readmore{
+    grid-column: 5 / span 3  ;
+    grid-row: 4 / span 3 ;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.readme {
+    padding: 15px;
+    width: 150px;
+    margin-top: 20px;
+    background-color:var(--clr-soft-red);
+    color: hsl(36, 100%, 99%);
+    font-size:medium;
+    font-weight: 700;
+    letter-spacing: 3px;
+    
+
+}
+.readme:hover {
+    background-color: var(--clr-dark);
+    cursor: pointer;
+}
+
+.section{
+    grid-column: 9/ span 3 ;
+    grid-row: 1/ span 5 ;
+    margin-left: 30px;
+    background-color: var(--clr-dark) ;
+    margin-top: 20px;
+    align-self: stretch;
+    overflow: hidden;
+    word-wrap: break-word;   
+    color: hsl(36, 100%, 99%)
+}
+.section h3{
+  margin-bottom: 10px;
+}
+
+.section h3:hover{
+    color: var(--clr-orange);
+    cursor: pointer;
+    
+}
+
+.section h1 {
+  color: var(--clr-orange);
+  margin-left: 10px;
+  margin-top: 20px;
+  font-size:xx-large;
+  
+}
+
+.hydrogen{
+    margin-top: 50px;
+    margin-left: 10px;
+    overflow: hidden;
+} 
+
+.art{   
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+.vc{   
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.w01{
+    grid-column:1 / span 4 ;
+    grid-row: 10 / span2 ;
+    margin: auto;
+}
+
+.w01content{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0.5rem; 
+    gap: 20px ;
+ 
+
+}
+.w01content h2:hover {
+
+    color: var(--clr-soft-red);
+    cursor: pointer;
+}
+
+.w02{
+    grid-column:5 / span 4 ;
+    grid-row:  10/ span 2 ;
+    margin: auto;
+    
+
+}
+
+
+.w02content{
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 15px;
+    gap: 20px ;
+
+}
+.w02content h2:hover {
+
+    color: var(--clr-soft-red);
+    cursor: pointer;
+}
+.w03{
+    grid-column: 9 / span 4 ;
+    grid-row: 10 / span 2 ;
+    margin-right: 40px;
+    max-width: 100;
+}
+
+.w03content{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+.w03content h2:hover {
+
+    color: var(--clr-soft-red);
+    cursor: pointer;
+}
+
+
+
+@media (max-width : 480px){
+
+.navbar{
+
+    gap: 10px;
+    font-size: 10px;
+    padding: 5px;
+}
+
+.link{
+    flex-direction: column;
+    
+
+ 
+}
+
+.link a {
+    display: none;
+}
+.hamburger{
+    position: relative;
+    z-index: 100;
+    border: none;
+    display: block;
+    top: 1rem;
+    right: 1rem;
+    padding: 4px;
+    margin-bottom: 30px;
+}
+.menus{
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    list-style: none;
+    padding-top: 4rem;
+    
+}
+.showmenus {
+    transform: translateY(0);
+}
+.menu-icon {
+    display: block;
+    
+     border: none;
+ }
+ 
+.menu-close {
+   display:none ;
+}
+
+    .mainpart {
+    display: flex;
+    flex-direction: column;
+    
+    font-size: 16px;
+    padding: 5px;
+    margin: auto;
+}
+
+.headingpic{
+    
+   
+    height: auto;
+    width: auto;
+
+    
+    
+}
+
+.logo {
+    margin: 0;
+}
+
+.section{
+
+    margin: 10px;
+}
+
+
+
+
+}
